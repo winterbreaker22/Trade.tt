@@ -128,12 +128,26 @@ mylib/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mylib.dir\build.make CMakeFiles/mylib.dir/build
 .PHONY : mylib/fast
 
+#=============================================================================
+# Target rules for targets named MyExecutable
+
+# Build rule for target.
+MyExecutable: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MyExecutable
+.PHONY : MyExecutable
+
+# fast build rule for target.
+MyExecutable/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyExecutable.dir\build.make CMakeFiles/MyExecutable.dir/build
+.PHONY : MyExecutable/fast
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
 # target to build an object file
 src/main.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mylib.dir\build.make CMakeFiles/mylib.dir/src/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyExecutable.dir\build.make CMakeFiles/MyExecutable.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -142,6 +156,7 @@ src/main.i: src/main.cpp.i
 # target to preprocess a source file
 src/main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mylib.dir\build.make CMakeFiles/mylib.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyExecutable.dir\build.make CMakeFiles/MyExecutable.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -150,6 +165,7 @@ src/main.s: src/main.cpp.s
 # target to generate assembly for a file
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mylib.dir\build.make CMakeFiles/mylib.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyExecutable.dir\build.make CMakeFiles/MyExecutable.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -160,6 +176,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... MyExecutable
 	@echo ... mylib
 	@echo ... src/main.obj
 	@echo ... src/main.i
