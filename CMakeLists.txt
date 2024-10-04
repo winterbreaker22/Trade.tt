@@ -11,6 +11,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Add the library and include path
 add_library(mylib STATIC src/main.cpp)
 
+# Add the executable
+add_executable(MyExecutable src/main.cpp)
+
 # Include directories for header files
 target_include_directories(mylib PUBLIC include)
 

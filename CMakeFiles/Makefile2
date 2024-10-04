@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = D:\Working\TT\Trade.tt
 
 # The main recursive "all" target.
 all: CMakeFiles/mylib.dir/all
+all: CMakeFiles/MyExecutable.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,6 +72,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/mylib.dir/clean
+clean: CMakeFiles/MyExecutable.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -80,7 +82,7 @@ clean: CMakeFiles/mylib.dir/clean
 CMakeFiles/mylib.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mylib.dir\build.make CMakeFiles/mylib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mylib.dir\build.make CMakeFiles/mylib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Working\TT\Trade.tt\CMakeFiles --progress-num=1,2 "Built target mylib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Working\TT\Trade.tt\CMakeFiles --progress-num=3,4 "Built target mylib"
 .PHONY : CMakeFiles/mylib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -98,6 +100,32 @@ mylib: CMakeFiles/mylib.dir/rule
 CMakeFiles/mylib.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mylib.dir\build.make CMakeFiles/mylib.dir/clean
 .PHONY : CMakeFiles/mylib.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/MyExecutable.dir
+
+# All Build rule for target.
+CMakeFiles/MyExecutable.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyExecutable.dir\build.make CMakeFiles/MyExecutable.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyExecutable.dir\build.make CMakeFiles/MyExecutable.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Working\TT\Trade.tt\CMakeFiles --progress-num=1,2 "Built target MyExecutable"
+.PHONY : CMakeFiles/MyExecutable.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/MyExecutable.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Working\TT\Trade.tt\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/MyExecutable.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Working\TT\Trade.tt\CMakeFiles 0
+.PHONY : CMakeFiles/MyExecutable.dir/rule
+
+# Convenience name for target.
+MyExecutable: CMakeFiles/MyExecutable.dir/rule
+.PHONY : MyExecutable
+
+# clean rule for target.
+CMakeFiles/MyExecutable.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyExecutable.dir\build.make CMakeFiles/MyExecutable.dir/clean
+.PHONY : CMakeFiles/MyExecutable.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
