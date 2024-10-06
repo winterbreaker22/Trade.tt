@@ -6,8 +6,8 @@ int add(int a, int b) {
 }
 
 int main() {
-    int x = 5;
-    int y = 7;
+    int x, y;
+    std::cin >> x >> y;
     std::cout << "The sum of " << x << " and " << y << " is: " << add(x, y) << std::endl;
     return 0;
 }
